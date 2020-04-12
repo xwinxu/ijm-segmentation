@@ -1,0 +1,53 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(readxl)
+library(RColorBrewer)
+myColors <- brewer.pal(9,"Set1")
+
+```
+
+```{r}
+exp54otsu <- read_excel("Desktop/sorted_MENDR4x/EXP#54_coculture_STEM_59_P6=2.5K_MuSCs/Otsu/exp54OtsuRstudio.xls", sheet = "Sheet1")
+exp54otsu[,1]
+rownames <- exp54otsu[,1]
+exp54otsu <- t(as.matrix(exp54otsu[,-1]))
+rownames(exp54otsu) <- as.matrix(rownames)
+exp54otsu
+plot(exp54otsu[,2])
+p <- ggplot(as.data.frame(exp54otsu), aes(x, y, exp54otsu)) + geom_point(p)
+p
+```
+
+#Exp 54 Adaptive
+```{r}
+X <- c(CTX+_DGKi+, CTX+_EDFRi+, CTX+_CLK1i(TG)+, CTX-_DMSO+, CTX+_WEE1i+, CTX+_P38i+, CTX+_IREi+, CTX+_KDRi+, CTX+_DMSO+)
+avY1 <-
+```
+
+#Exp 55 Otsu
+```{r}
+
+```
+
+#Exp 55 Adaptive
+```{r}
+
+```
+
+#Exp 57 Otsu
+```{r}
+
+```
+
+#Exp 57 Adaptive
+```{r}
+
+```
+
